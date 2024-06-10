@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <style>
+                nav {
+                  background-color: #333;
+                  padding: 10px;
+                  color: #fff;
+                  text-align: center;
+              }
+
+              nav a {
+                  color: #fff;
+                  text-decoration: none;
+                  margin: 0 10px;
+              }
+              body {
+                  font-family: Arial, sans-serif;
+                  background-color: #f1f1f1;
+                  margin: 0;
+                  padding: 20px;
+              }
+
+              h1 {
+                  text-align: center;
+                  margin-top: 30px;
+              }
+
+              .container {
+                  max-width: 500px;
+                  margin: 0 auto;
+                  padding: 20px;
+                  background-color: #fff;
+                  border-radius: 5px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              }
+
+              .form-group {
+                  margin-bottom: 20px;
+              }
+
+              .form-group label {
+                  display: block;
+                  font-weight: bold;
+                  margin-bottom: 5px;
+              }
+
+              .form-group input[type="file"] {
+                  width: 100%;
+                  padding: 10px;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+              }
+
+              .form-group input[type="submit"] {
+                  background-color: #4CAF50;
+                  color: #fff;
+                  border: none;
+                  padding: 10px 20px;
+                  font-size: 16px;
+                  border-radius: 4px;
+                  cursor: pointer;
+              }
+
+              .form-group input[type="submit"]:hover {
+                  background-color: #45a049;
+              }
+          </style>
+          <!-- Navbar (sit on top) -->
+      <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+          <a href="/home" class="w3-bar-item w3-button w3-wide">MRS-Music Recommendation System with ML</a>
+          <!-- Right-sided navbar links -->
+          <div class="w3-right w3-hide-small">
+            <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+            <a href="/" class="w3-bar-item w3-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-music" viewBox="0 0 16 16">
+        <path d="M11 6.64a1 1 0 0 0-1.243-.97l-1 .25A1 1 0 0 0 8 6.89v4.306A2.6 2.6 0 0 0 7 11c-.5 0-.974.134-1.338.377-.36.24-.662.628-.662 1.123s.301.883.662 1.123c.364.243.839.377 1.338.377s.974-.134 1.338-.377c.36-.24.662-.628.662-1.123V8.89l2-.5z"/>
+        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+      </svg>Music Genre Classify</a>
+            <a href="/Singer" class="w3-bar-item w3-button"><i class="fa fa-th"></i>Singer Voice Classify</a
+                                                                                                    <a href="/profile" class="w3-bar-item w3-button">Your Profile</a>
+          <a href= "/login" class="w3-bar-item w3-button">Login</a>
+          </div>
+          <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+          <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+      </div>
+<head>
+    <title>User Profile</title>
+</head>
+<body>
+    <h1>User Profile</h1>
+
+    <h2>Welcome, {{ user[1] }}!</h2>
+
+    <table>
+        <tr>
+            <th>Your Search Record</th>
+        </tr>
+        {% for row in rows %}
+        <tr>
+            <td><div class="video-container">
+                      <iframe width="560" height="315" src="{{ row[1] }}" frameborder="0" allowfullscreen></iframe></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    
+</body>
+</html>
